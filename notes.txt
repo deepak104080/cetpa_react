@@ -1,0 +1,69 @@
+REACT
+sitecore - cms with .NET
+front end + back end
+
+
+
+
+JS - programming lang
+not possible / inefficient
+
+
+routing
+temp data storage
+handling of ui elemnts
+DOM
+api handling
+authentication
+form submission
+
+
+Server oriented approach
+Java full stack
+sitecore - browser
+django/flask - 
+
+
+load on network - more data/ more bandwidth - heavy cost
+
+
+
+
+front end frameworks and libraries - NodeJS (2009)
+Google - Angular - Framework - MEAN - JS vs ES6
+Facebook - React - Library - MERN - UI Components
+
+
+react vs angular
+<!-- load 5  - load 10 -->
+E-Coomerce - React / Angular
+Admin Page - 3-4 api calls - React
+Static Website - React
+
+
+Framework - complate package - 
+architecture (MVC) - controllers
+templating mechanism
+routing
+local data storage - (html localStorage)
+dom handling
+
+
+no - direct database connection / api calls
+
+
+Library - set of function, 
+
+
+
+REACT
+
+
+import react , start creating components
+npm (Node Package Manager) - create structure, install react dependencies
+react - direct boilerplate (default file structure)
+
+
+
+
+
