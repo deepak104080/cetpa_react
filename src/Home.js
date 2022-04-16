@@ -1,4 +1,5 @@
 import React from 'react';
+import ChildComp2 from './ChildComp';
 
 class Home extends React.Component {
     constructor() {
@@ -8,7 +9,9 @@ class Home extends React.Component {
             count:0,
             addr: '',
             city: '',
-            email: ''
+            email: '',
+            loginStatus: false,
+            input_val: ''
         }
     }
     increment_fn = () => {
@@ -61,7 +64,46 @@ class Home extends React.Component {
         )
     }
 
+    login_user = () => {
+        this.setState(
+            {
+                ...this.state, loginStatus:!this.state.loginStatus
+            }
+        )
+    }
+
+    update_custom_count= (num) => {
+        console.log('num-----------------', num);
+        this.setState(
+            {
+                ...this.state, count:this.state.count + num
+            }
+        )
+    }
+
+    display_input_value = (event) => {
+        console.log(event.target.value);
+        this.setState(
+            {
+                ...this.state, input_val: event.target.value
+            }
+        )
+    }
+
+
+    componentDidMount() {
+        console.log('componentDidMount running...');
+        // call api to check login
+        // update loggin varibale in state
+    }
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate running...');
+    }
+
     render() {
+        console.log('render running...');
+        let city_name="GGN";
         return(
             <div>
                 <div>Altudo - Class Component</div>
@@ -73,8 +115,21 @@ class Home extends React.Component {
                 <button onClick={this.increment_fn}>Increase</button>
                 <button onClick={this.decrement_fn}>Decrease</button>
                 <button onClick={this.update_addr_fn}>Update address</button>
+                <br></br><br></br>
+                <button onClick={() => this.update_custom_count(5)}>Update Count by 5</button>
+                <br></br><br></br>
+                <input type="text" value={this.state.input_val} onChange={this.display_input_value.bind(this)}/>
+                <br></br><br></br>
+
+                <ChildComp2 city={city_name} country="India" state={this.state.addr}/>
+
+
+                {!this.state.loginStatus && <button onClick={this.login_user}>Login</button>}
+                {this.state.loginStatus && <button onClick={this.login_user}>Logout</button>}
+
+                <br></br>
+                {(this.state.loginStatus && true && true && true) ? <button onClick={this.login_user}>Logout If Else</button> : <button onClick={this.login_user}>Login If Else</button>}
             </div>
-            
         )
     }
 }
@@ -114,3 +169,44 @@ export default Home;
 // next previous clicked - single qs
 
 
+
+
+// stages - 
+// mounting - first time component loading
+// re-rendering - updation
+// unmounting - leaving that component (delete all varialbles, varible, counter, async method  )
+
+
+
+// lifecycle methods
+// Mounting Phase : -
+// constructor() - first lifecycle
+// *render() - compulsory
+// componentDidMount() - run just after component mounting - just one time
+
+
+// Re-rendering
+// render()
+// componentDidUpdate() - run after updations - after every re-render
+
+
+// Unmounting
+// componentWillUnmount() - delete/cleaning
+
+
+
+
+// setState() - update state variable and start re-render
+// forceUpdate() - frcecfully re-render
+
+
+// Ways of Data Transfer
+// Props - 
+// Context
+// Redux
+
+
+
+// conditional operartor
+// if - &&
+// if else - (true ? 'true' : 'false')
