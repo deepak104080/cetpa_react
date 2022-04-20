@@ -14,6 +14,7 @@ class Home extends React.Component {
             input_val: ''
         }
     }
+    //this - referring to self object
     increment_fn = () => {
         console.log('increment clicked...');
         // this.state = {
@@ -104,6 +105,7 @@ class Home extends React.Component {
     render() {
         console.log('render running...');
         let city_name="GGN";
+        const temp1 = 'temp1'
         return(
             <div>
                 <div>Altudo - Class Component</div>
@@ -121,7 +123,7 @@ class Home extends React.Component {
                 <input type="text" value={this.state.input_val} onChange={this.display_input_value.bind(this)}/>
                 <br></br><br></br>
 
-                <ChildComp2 city={city_name} country="India" state={this.state.addr}/>
+                <ChildComp2 city={city_name} country="India" state={this.state.addr} temp1={temp1}/>
 
 
                 {!this.state.loginStatus && <button onClick={this.login_user}>Login</button>}
@@ -210,3 +212,17 @@ export default Home;
 // conditional operartor
 // if - &&
 // if else - (true ? 'true' : 'false')
+
+
+
+
+// State vs Props (var, let, const) - Object
+
+// to store data inside component - pass data outside component
+// state values can update/change (mutable) - props values cant change. (read only / immutable)
+// Class Comp - no use in functional comp
+// props can be used - props can be used
+
+
+// Class Component - Statefull Component
+// Functional Component - Stateless Component

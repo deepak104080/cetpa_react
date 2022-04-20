@@ -43,14 +43,13 @@ class ToDo extends React.Component {
 
                 <input type="text" value={this.state.input_val} onChange={this.display_input_value.bind(this)}/>
                 <button onClick={this.add_to_list}>Add to List</button>
+                
+                <ul>
+                {this.state.toDoList && this.state.toDoList.map((item, index) => (
 
-                {this.state.toDoList && this.state.toDoList.map((item) => (
-                    <div>{item}</div>
+                    <li key={`altudo ${index}`}>{item}</li>
                 ))}
-
-                {/* map, filter, reduce, foreach
-                object methods
-                string, date, math */}
+                </ul>
 
             </>
         )
