@@ -53,7 +53,7 @@ class Home extends React.Component {
                 count:this.state.count - 1
             }
         )
-        console.log(this.state.count);
+        console.log('after setstate - ', this.state.count);
         // old state values
     }
 
@@ -100,6 +100,7 @@ class Home extends React.Component {
 
     componentDidUpdate() {
         console.log('componentDidUpdate running...');
+        console.log('updated state - ', this.state.count);
     }
 
     render() {
