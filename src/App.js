@@ -1,31 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
-
-// const temp = `<div class></div>`;
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import logo from './logo.svg';
+// import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './css/style.css';
+import Header from './common/Header';
+import Footer from './common/Footer';
+import MenuBar  from './NavBar';
+import Home  from './Home';
+import ToDo from './ToDo';
+import FnComp from './FnComp';
+import FnCompAPI from './FnCompAPI';
+import GitHub from './GitHub';
 
 function App() {
-  var location = 'GGN';
 
-  // class - css - className
-  // components - class and functional
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Altudo - {location}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className='container'>
+      
+        <Header/>
+
+        <MenuBar/>
+        <div className='row'>
+            <div className='col-sm-12 col-lg-2 bg-primary'>Left</div>
+            <div className='col-sm-12 col-lg-8 bg-info'>
+              <Routes>
+                <Route path='/' element = {<Home/>}/>
+                <Route path='/home' element = {<Home/>}/>
+                <Route path='/github' element = {<GitHub/>}/>
+                <Route path='/todo' element = {<ToDo/>}/>
+                <Route path='/fn' element = {<FnComp/>}/>
+                <Route path='/fnapi' element = {<FnCompAPI/>}/>
+              </Routes>
+            </div>
+            <div className='col-sm-12 col-lg-2 bg-primary'>Right</div>
+        </div>
+        
+        <Footer/>
+
+      </div>
+    </BrowserRouter>
   );
 }
 
@@ -64,3 +80,6 @@ export default App;
 
 
 // Till React 16.7 (16.8 - Hooks (jugad of react features))
+
+
+// SPA - Single Page Aplication

@@ -80,3 +80,24 @@ online websites - which follows git technology
 github
 gitlab
 bitbucket
+
+
+
+
+
+API CALL
+Application Programming Interface - front end and back end
+REST API - Representational State Transfer
+
+SOAP API - java, .NET - XML
+REST API - JSON - JS Object
+
+REST API - CRUD
+GET - fetching data
+POST - submitting data
+PUT - updating data
+DELETE - deleting data
+
+
+
+

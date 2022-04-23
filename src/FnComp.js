@@ -22,6 +22,7 @@ const FnComp = () => {
     }
     const showDiv = () => {
         setStatus(status => !status);
+        console.log(status);
     }
 
     useEffect(() => {
@@ -33,6 +34,13 @@ const FnComp = () => {
     useEffect(() => {
         console.log(count, count2, status);
         console.log('Use Effect triggered once....')
+        fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+        .then((resp) => {
+        return resp.json();
+        })
+        .then((data) => {
+        console.log(data);
+        })
     },[])
     //componentDidMount
 
@@ -43,7 +51,7 @@ const FnComp = () => {
     //componentDidMount
 
 
-
+    
     return(
         <>
             <div>This is a functional component.</div>
@@ -56,6 +64,10 @@ const FnComp = () => {
             <button onClick={showDiv}>Show Hide Button</button>
 
             {/* HW - Implement Modal */}
+
+            {/* {data.bpi && data.bpi.map((item) => (
+                <div>{item.code}</div>
+            ))} */}
         </>
     )
 }
@@ -83,3 +95,5 @@ export default FnComp;
 // wordpress - hooks
 
 // useEffect - Lifecycle logics
+
+

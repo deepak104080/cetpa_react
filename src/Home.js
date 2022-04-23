@@ -1,5 +1,6 @@
 import React from 'react';
 import ChildComp2 from './ChildComp';
+import {Button} from 'react-bootstrap';
 
 class Home extends React.Component {
     constructor() {
@@ -115,7 +116,7 @@ class Home extends React.Component {
                 <div>City = {this.state.city}</div>
                 <div>Email = {this.state.email}</div>
 
-                <button onClick={this.increment_fn}>Increase</button>
+                <Button variant="secondary" onClick={this.increment_fn}>Increase</Button>
                 <button onClick={this.decrement_fn}>Decrease</button>
                 <button onClick={this.update_addr_fn}>Update address</button>
                 <br></br><br></br>
@@ -189,7 +190,7 @@ export default Home;
 
 
 // Re-rendering
-// render()
+// re-render() - virtual dom
 // componentDidUpdate() - run after updations - after every re-render
 
 
