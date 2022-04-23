@@ -24,28 +24,31 @@ const GitHub = () => {
             </div>
             {
                 pageNum && pageNum.map((item) => (
-                    <button className="btn btn-danger" onClick={() => setCurrentPageNum(item)}>Page {item}</button>
+                    <button className="btn btn-danger btn-sm" onClick={() => setCurrentPageNum(item)}>Page {item}</button>
                 ))
             }
-            <button>Load More...</button>
-            <table border="1">
-                        <tr>
-                            <th>Number</th>
-                            <th>ID</th>
-                            <th>Login User</th>
-                            <th>URL</th>
-                        </tr>
-                {
-                    issuesArr && issuesArr.map((item) => (                       
-                        <tr key={item.number}>
-                            <td>{item.number}</td>
-                            <td>{item.id}</td>
-                            <td>{item.user.login}</td>
-                            <td>{item.user.url}</td>
-                        </tr>
-                    ))
-                }
-            </table>
+
+            <button className='btn btn-primary btn-sm'>Load More...</button>
+            <div className='table-responsive'>
+                <table className='table'>
+                            <tr>
+                                <th>Number</th>
+                                <th>ID</th>
+                                <th>Login User</th>
+                                <th>URL</th>
+                            </tr>
+                            {
+                                issuesArr && issuesArr.map((item) => (                       
+                                    <tr key={item.number}>
+                                        <td>{item.number}</td>
+                                        <td>{item.id}</td>
+                                        <td>{item.user.login}</td>
+                                        <td>{item.user.url}</td>
+                                    </tr>
+                                ))
+                            }
+                </table>
+            </div>
         </>
     )
 }

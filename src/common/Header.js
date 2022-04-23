@@ -6,7 +6,7 @@ const Header = () => {
     
     return(
         <>
-            <div className='row bg-danger'>
+            <div className='row bg-success'>
                 <div className='col-12'>
                     Altudo
                 </div>

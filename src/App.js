@@ -6,7 +6,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 import Header from './common/Header';
 import Footer from './common/Footer';
-import MenuBar  from './NavBar';
+import MenuBar  from './common/NavBar';
 import Home  from './Home';
 import ToDo from './ToDo';
 import FnComp from './FnComp';
@@ -24,8 +24,8 @@ function App() {
 
         <MenuBar/>
         <div className='row'>
-            <div className='col-sm-12 col-lg-2 bg-primary'>Left</div>
-            <div className='col-sm-12 col-lg-8 bg-info'>
+            <div className='col-sm-12 col-lg-2 bg-warning'>Left</div>
+            <div className='col-sm-12 col-lg-8 bg-light'>
               <Routes>
                 <Route path='/' element = {<Home/>}/>
                 <Route path='/home' element = {<Home/>}/>
@@ -35,7 +35,7 @@ function App() {
                 <Route path='/fnapi' element = {<FnCompAPI/>}/>
               </Routes>
             </div>
-            <div className='col-sm-12 col-lg-2 bg-primary'>Right</div>
+            <div className='col-sm-12 col-lg-2 bg-warning'>Right</div>
         </div>
         
         <Footer/>

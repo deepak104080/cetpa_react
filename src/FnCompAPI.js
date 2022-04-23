@@ -31,10 +31,12 @@ const FnCompAPI = () => {
     return(
         <>
             <div>This is a functional component.</div>
-            
+
+            <ul class="list-group">
             {apiDataArr && apiDataArr.map((item) => (
-                <div>{item.Description}</div>
+                <li class="list-group-item">{item.Description}</li>
             ))}
+            </ul>
             {/* {apiDataArr.USD && apiDataArr.USD.code}
             {apiDataArr.USD && apiDataArr.USD.description} */}
         </>
