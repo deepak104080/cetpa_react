@@ -12,6 +12,7 @@ import ToDo from './ToDo';
 import FnComp from './FnComp';
 import FnCompAPI from './FnCompAPI';
 import GitHub from './GitHub';
+import ToDoFn from './ToDoFn';
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
 
         <MenuBar/>
         <div className='row'>
-            <div className='col-sm-12 col-lg-2 bg-warning'>Left</div>
+            <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50'>Left</div>
             <div className='col-sm-12 col-lg-8 bg-light'>
               <Routes>
                 <Route path='/' element = {<Home/>}/>
@@ -33,9 +34,10 @@ function App() {
                 <Route path='/todo' element = {<ToDo/>}/>
                 <Route path='/fn' element = {<FnComp/>}/>
                 <Route path='/fnapi' element = {<FnCompAPI/>}/>
+                <Route path='/todofn' element = {<ToDoFn/>}/>
               </Routes>
             </div>
-            <div className='col-sm-12 col-lg-2 bg-warning'>Right</div>
+            <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50'>Right</div>
         </div>
         
         <Footer/>

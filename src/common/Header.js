@@ -6,7 +6,7 @@ const Header = () => {
     
     return(
         <>
-            <div className='row bg-success'>
+            <div className='row bg-success bg-opacity-75'>
                 <div className='col-12'>
                     Altudo
                 </div>

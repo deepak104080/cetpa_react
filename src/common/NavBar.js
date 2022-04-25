@@ -15,7 +15,7 @@ const MenuBar = () => {
             
 
 
-            <div className='row bg-info'>
+            <div className='row bg-info bg-opacity-50'>
                 <div className='col-12'>
                 
 
@@ -25,6 +25,7 @@ const MenuBar = () => {
                     <Nav.Link><Link to="/todo" className='btn btn-outline-success'>ToDo</Link></Nav.Link>
                     <Nav.Link><Link to="/fn" className='btn btn-outline-success'>Fn Comp</Link></Nav.Link>
                     <Nav.Link><Link to="/fnapi" className='btn btn-outline-success'>Fn Comp API</Link></Nav.Link>
+                    <Nav.Link><Link to="/todofn" className='btn btn-outline-success'>To Do Fn</Link></Nav.Link>
 
                     {/* <NavDropdown title="Dropdown" id="nav-dropdown" className='btn btn-outline-success'>
                         <NavDropdown.Item>-</NavDropdown.Item>
