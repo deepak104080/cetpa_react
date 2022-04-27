@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import logo from './logo.svg';
 // import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './css/style.css';
+import './css/tempcss.scss';
 import Header from './common/Header';
 import Footer from './common/Footer';
 import MenuBar  from './common/NavBar';
@@ -19,13 +21,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className='container'>
+      <div className='container app-wrapper'>
       
         <Header/>
 
         <MenuBar/>
         <div className='row'>
-            <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50'>Left</div>
+            <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Left</div>
             <div className='col-sm-12 col-lg-8 bg-light'>
               <Routes>
                 <Route path='/' element = {<Home/>}/>
@@ -37,7 +39,7 @@ function App() {
                 <Route path='/todofn' element = {<ToDoFn/>}/>
               </Routes>
             </div>
-            <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50'>Right</div>
+            <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Right</div>
         </div>
         
         <Footer/>

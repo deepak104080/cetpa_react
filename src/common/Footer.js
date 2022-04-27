@@ -6,7 +6,7 @@ const Footer = () => {
     
     return(
         <>
-            <div className='row bg-info bg-opacity-50'>
+            <div className='row bg-info bg-opacity-50 app-footer'>
                 <div className='col-12'>
                     Copyright text
                 </div>

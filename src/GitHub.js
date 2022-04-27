@@ -24,7 +24,8 @@ const GitHub = () => {
             </div>
             {
                 pageNum && pageNum.map((item) => (
-                    <button className="btn btn-danger btn-sm" onClick={() => setCurrentPageNum(item)}>Page {item}</button>
+                    <button className="btn btn-sm btn-secondary" onClick={() => setCurrentPageNum(item)}>Page {item}</button>
+                    // <button className="button-github" onClick={() => setCurrentPageNum(item)}>Page {item}</button>
                 ))
             }
 

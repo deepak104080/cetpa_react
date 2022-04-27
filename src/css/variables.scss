@@ -1,0 +1,9 @@
+$greycolour: #565656;
+$backColour1: #baf18d;
+$backColour2: #f9bbe3;
+
+@mixin buttonStyle($color) {
+    padding: 20px;
+    border: 1px solid #f65656;
+    background-color: $color;
+}

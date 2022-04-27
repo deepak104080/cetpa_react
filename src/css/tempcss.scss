@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+body {
+    // background-color: $backColour;
+    background: linear-gradient(to right, $backColour1, $backColour2);
+    // background: linear-gradient(to right, #e66465, #9198e5);
+    .app-wrapper {
+        // font-size: 50px;
+        .app-header {
+            font-size: 50px;
+            color: $greycolour;
+        }
+        .app-footer {
+            color: $greycolour;
+        }
+        .app-sidebar {
+            color: $greycolour;
+        }
+        .button-github {
+            @include buttonStyle(#baf18d);
+        }
+    }
+}

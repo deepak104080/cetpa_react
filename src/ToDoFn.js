@@ -59,7 +59,9 @@ const ToDoFn = () => {
                             <div key={item.id} className="row">
                                 <span className="col-6" key={`altudo ${index}`}>{item.todotext}</span>
                                 <button className='col-2 btn btn-success btn-sm text-center' onClick={() => markDone(item.id)}>Done</button>
-                                <button className="col-2 btn btn-danger btn-sm text-center" onClick={() => markDelete(item.id)}>Delete</button>
+                                <button className="col-2 btn btn-danger btn-sm text-center" onClick={() => markDelete(item.id)}>
+                                    <i className='fa fa-trash'></i>
+                                </button>
                             </div>
                             </>
                         ))}
