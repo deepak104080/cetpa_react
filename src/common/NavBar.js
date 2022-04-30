@@ -26,6 +26,8 @@ const MenuBar = () => {
                     <Nav.Link><Link to="/fn" className='btn btn-outline-success'>Fn Comp</Link></Nav.Link>
                     <Nav.Link><Link to="/fnapi" className='btn btn-outline-success'>Fn Comp API</Link></Nav.Link>
                     <Nav.Link><Link to="/todofn" className='btn btn-outline-success'>To Do Fn</Link></Nav.Link>
+                    <Nav.Link><Link to="/reffn" className='btn btn-outline-success'>Ref Fn</Link></Nav.Link>
+                    <Nav.Link><Link to="/refclass" className='btn btn-outline-success'>Ref Class</Link></Nav.Link>
 
                     {/* <NavDropdown title="Dropdown" id="nav-dropdown" className='btn btn-outline-success'>
                         <NavDropdown.Item>-</NavDropdown.Item>

@@ -15,6 +15,8 @@ import FnComp from './FnComp';
 import FnCompAPI from './FnCompAPI';
 import GitHub from './GitHub';
 import ToDoFn from './ToDoFn';
+import RefFn from './RefFn';
+import RefClass from './RefClass';
 
 function App() {
 
@@ -37,6 +39,8 @@ function App() {
                 <Route path='/fn' element = {<FnComp/>}/>
                 <Route path='/fnapi' element = {<FnCompAPI/>}/>
                 <Route path='/todofn' element = {<ToDoFn/>}/>
+                <Route path='/reffn' element = {<RefFn/>}/>
+                <Route path='/refclass' element = {<RefClass/>}/>
               </Routes>
             </div>
             <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Right</div>
