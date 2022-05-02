@@ -17,6 +17,7 @@ import GitHub from './GitHub';
 import ToDoFn from './ToDoFn';
 import RefFn from './RefFn';
 import RefClass from './RefClass';
+import EMI from './EMI';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
                 <Route path='/todofn' element = {<ToDoFn/>}/>
                 <Route path='/reffn' element = {<RefFn/>}/>
                 <Route path='/refclass' element = {<RefClass/>}/>
+                <Route path='/emi' element = {<EMI/>}/>
               </Routes>
             </div>
             <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Right</div>
