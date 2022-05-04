@@ -29,6 +29,7 @@ const MenuBar = () => {
                     <Nav.Link><Link to="/reffn" className='btn btn-outline-success'>Ref Fn</Link></Nav.Link>
                     <Nav.Link><Link to="/refclass" className='btn btn-outline-success'>Ref Class</Link></Nav.Link>
                     <Nav.Link><Link to="/emi" className='btn btn-outline-success'>EMI</Link></Nav.Link>
+                    <Nav.Link><Link to="/formfn" className='btn btn-outline-success'>Form Fn</Link></Nav.Link>
 
                     {/* <NavDropdown title="Dropdown" id="nav-dropdown" className='btn btn-outline-success'>
                         <NavDropdown.Item>-</NavDropdown.Item>

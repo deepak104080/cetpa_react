@@ -18,6 +18,7 @@ import ToDoFn from './ToDoFn';
 import RefFn from './RefFn';
 import RefClass from './RefClass';
 import EMI from './EMI';
+import FormFn from './FormFn';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
                 <Route path='/reffn' element = {<RefFn/>}/>
                 <Route path='/refclass' element = {<RefClass/>}/>
                 <Route path='/emi' element = {<EMI/>}/>
+                <Route path='/formfn' element = {<FormFn/>}/>
               </Routes>
             </div>
             <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Right</div>

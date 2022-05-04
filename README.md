@@ -126,3 +126,13 @@ use toLocaleString method on date object to display date-time
 
 It should be displayed like this: - "12/2/2021, 3:17:23 PM" (without double quotes)
 On some OS/browsers , toLocaleString may or may not show AM/PM at the end, but the solution will still be acceptable
+
+
+
+
+
+
+
+
+Controlled Components vs Uncontrolled components
+State logics vs Ref
