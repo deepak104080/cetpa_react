@@ -1,7 +1,7 @@
 import React from 'react';
 import ChildComp1 from './ChildComp1';
+import {WeatherContext} from './DataTemp';
 
-const WeatherContext = React.createContext();
 
 class Parent extends React.Component {
     constructor(){
@@ -11,19 +11,26 @@ class Parent extends React.Component {
         }
     }
 
+    updateTemperature = () => {
+        this.setState({
+            temperature: '50 degree celsius'
+        })
+    }
+
     render() {
         return(
             <>
-                <WeatherContext.Provider value={this.state.temperature}>
+                <WeatherContext.Provider value={{val: this.state.temperature, valMethod: this.updateTemperature}}>
                     <ChildComp1 temp={this.state.temperature}/>
                 </WeatherContext.Provider>
+                <button onClick={this.updateTemperature}>Update temp</button>
             </>
         )
     }
 }
 
 export default Parent;
-export {WeatherContext};
+// export {WeatherContext};
 
 
 

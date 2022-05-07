@@ -1,5 +1,6 @@
 import React from 'react';
-import { WeatherContext } from './Parent';
+import ChildComp5 from './ChildComp5';
+import { WeatherContext } from './DataTemp';
 
 class ChildComp4 extends React.Component {
     constructor(props){
@@ -17,14 +18,18 @@ class ChildComp4 extends React.Component {
                     (temp) => {
                         return (
                             <>
-                            Temperature = {temp}
+                            Temperature = {temp.val}
+                            <br>
+                            </br>
+                            <button onClick={temp.valMethod}>Update temp</button>
                             </>
                         )
                     }
+                    
                 }
             </WeatherContext.Consumer>
-
-
+                <br></br>
+            <ChildComp5 />
             </>
         )
     }

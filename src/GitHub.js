@@ -1,9 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
+import { DataAppContext } from './DataApp';
 
 const GitHub = () => {
     const [issuesArr, setIssuesArr] = useState([]);
     const [pageNum, setPageNum] = useState([1,2,3,4,5,6,7,8,9,10]);
     const [currentPageNum, setCurrentPageNum] = useState(1);
+    const login_temp = useContext(DataAppContext);
+    console.log(login_temp);
 
     useEffect(() => {
         fetch(`https://api.github.com/repositories/1296269/issues?page=${currentPageNum}&per_page=10`)
@@ -19,6 +22,17 @@ const GitHub = () => {
 
     return(
         <>
+            <div>
+                
+                    <button onClick={login_temp.login}>
+                        {
+                            login_temp.appstate.loginstatus ? <span>Logout</span> : <span>Login</span>
+                        }
+                    </button>
+                    Welcome - {login_temp.appstate.loginstatus && login_temp.appstate.username}
+                    {/* login_temp.loginstatus ? <button onClick={login_temp.login}></button> : <button onClick={login_temp.login}>Login</button> */}
+                
+            </div>
             <div>
                 Github issues List
             </div>

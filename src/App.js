@@ -20,39 +20,43 @@ import RefClass from './RefClass';
 import EMI from './EMI';
 import FormFn from './FormFn';
 import Parent from './context/Parent';
+import ExpenseTracker from './expense/ExpenseTracker';
+import DataApp, {DataAppContext} from './DataApp';
 
 function App() {
-
 
   return (
     <BrowserRouter>
       <div className='container app-wrapper'>
-      
-        <Header/>
+        <DataApp>
+          <Header/>
 
-        <MenuBar/>
-        <div className='row'>
-            <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Left</div>
-            <div className='col-sm-12 col-lg-8 bg-light'>
-              <Routes>
-                <Route path='/' element = {<Home/>}/>
-                <Route path='/home' element = {<Home/>}/>
-                <Route path='/github' element = {<GitHub/>}/>
-                <Route path='/todo' element = {<ToDo/>}/>
-                <Route path='/fn' element = {<FnComp/>}/>
-                <Route path='/fnapi' element = {<FnCompAPI/>}/>
-                <Route path='/todofn' element = {<ToDoFn/>}/>
-                <Route path='/reffn' element = {<RefFn/>}/>
-                <Route path='/refclass' element = {<RefClass/>}/>
-                <Route path='/emi' element = {<EMI/>}/>
-                <Route path='/formfn' element = {<FormFn/>}/>
-                <Route path='/context' element = {<Parent/>}/>
-              </Routes>
-            </div>
-            <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Right</div>
-        </div>
-        
-        <Footer/>
+          <MenuBar/>
+          <div className='row'>
+              <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Left</div>
+              <div className='col-sm-12 col-lg-8 bg-light'>
+                <Routes>
+                  <Route path='/' element = {<Home/>}/>
+                  <Route path='/home' element = {<Home/>}/>
+                  <Route path='/github' element = {<GitHub/>}/>
+                  <Route path='/todo' element = {<ToDo/>}/>
+                  <Route path='/fn' element = {<FnComp/>}/>
+                  <Route path='/fnapi' element = {<FnCompAPI/>}/>
+                  <Route path='/todofn' element = {<ToDoFn/>}/>
+                  <Route path='/reffn' element = {<RefFn/>}/>
+                  <Route path='/refclass' element = {<RefClass/>}/>
+                  <Route path='/emi' element = {<EMI/>}/>
+                  <Route path='/formfn' element = {<FormFn/>}/>
+                  <Route path='/context' element = {<Parent/>}/>
+                  <Route path='/expensetracker' element = {<ExpenseTracker/>}/>
+                  
+                </Routes>
+              </div>
+              <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Right</div>
+          </div>
+          
+          <Footer/>
+        </DataApp>
 
       </div>
     </BrowserRouter>

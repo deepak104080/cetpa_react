@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { DataAppContext } from './DataApp';
 
 class ToDo extends React.Component {
     constructor(){
@@ -38,7 +39,24 @@ class ToDo extends React.Component {
 
     render() {
         return(
-            <>
+            <>  
+                <DataAppContext.Consumer>
+                    {
+                        (login_temp) => {
+                            console.log(login_temp);
+                            return (
+                                <>
+                                <button onClick={login_temp.login}>
+                                    {login_temp.appstate.loginstatus ? <span>Logout</span> : <span>Login</span>}
+                                </button>
+                                Welcome - {login_temp.appstate.loginstatus && login_temp.appstate.username}
+                                </>
+                            )
+                        }
+                        
+                    }
+                </DataAppContext.Consumer>
+
                 <div>To Do App</div>
 
                 <input type="text" value={this.state.input_val} onChange={this.display_input_value.bind(this)}/>

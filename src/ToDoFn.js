@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import {nanoid} from 'nanoid';
+import { DataAppContext } from './DataApp';
 
 
 const ToDoFn = () => {
     const [input_val, setInput] = useState('');
     const [toDoList, setToDoList] = useState([]); // array of objects - id, todotext, status
+    const login_temp = useContext(DataAppContext);
 
     const handleChange = (e) => {
         setInput(e.target.value);
@@ -41,7 +43,19 @@ const ToDoFn = () => {
         console.log('setToDo List', toDoList);
     })
     return(
-        <>
+        <>  
+            <div>
+                    
+                    <button onClick={login_temp.login}>
+                        {
+                            login_temp.appstate.loginstatus ? <span>Logout</span> : <span>Login</span>
+                        }
+                    </button>
+                    Welcome - {login_temp.appstate.loginstatus && login_temp.appstate.username}
+                    {/* login_temp.loginstatus ? <button onClick={login_temp.login}></button> : <button onClick={login_temp.login}>Login</button> */}
+                
+            </div>
+
             <h2>To Do App</h2>
             <div className='row'>
                 <div className='col-12'>
