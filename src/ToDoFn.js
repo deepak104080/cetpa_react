@@ -44,16 +44,17 @@ const ToDoFn = () => {
     })
     return(
         <>  
-            <div>
+            <div className='row bg-info'>
+                <div className='col-12'>
                     
-                    <button onClick={login_temp.login}>
+                    <button className="btn btn-primary btn-sm" onClick={login_temp.login}>
                         {
                             login_temp.appstate.loginstatus ? <span>Logout</span> : <span>Login</span>
                         }
                     </button>
                     Welcome - {login_temp.appstate.loginstatus && login_temp.appstate.username}
                     {/* login_temp.loginstatus ? <button onClick={login_temp.login}></button> : <button onClick={login_temp.login}>Login</button> */}
-                
+                    </div>
             </div>
 
             <h2>To Do App</h2>

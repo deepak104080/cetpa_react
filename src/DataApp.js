@@ -38,3 +38,7 @@ const DataApp = (props) => {
 export default DataApp;
 
 export {DataAppContext};
+
+
+// Provide and Concumer can be used in functional Component, but useContext can not be used in Class Component.
+// React Context - https://www.carlrippon.com/static/0d1f722d0fe4c2bc4c3d71595dbe67dd/ca682/prop-drilling-v-context.png

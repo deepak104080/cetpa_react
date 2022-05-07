@@ -40,22 +40,26 @@ class ToDo extends React.Component {
     render() {
         return(
             <>  
-                <DataAppContext.Consumer>
-                    {
-                        (login_temp) => {
-                            console.log(login_temp);
-                            return (
-                                <>
-                                <button onClick={login_temp.login}>
-                                    {login_temp.appstate.loginstatus ? <span>Logout</span> : <span>Login</span>}
-                                </button>
-                                Welcome - {login_temp.appstate.loginstatus && login_temp.appstate.username}
-                                </>
-                            )
-                        }
-                        
-                    }
-                </DataAppContext.Consumer>
+                <div className='row bg-info'>
+                    <div className='col-12'>
+                        <DataAppContext.Consumer>
+                            {
+                                (login_temp) => {
+                                    console.log(login_temp);
+                                    return (
+                                        <>
+                                        <button className="btn btn-primary btn-sm" onClick={login_temp.login}>
+                                            {login_temp.appstate.loginstatus ? <span>Logout</span> : <span>Login</span>}
+                                        </button>
+                                        Welcome - {login_temp.appstate.loginstatus && login_temp.appstate.username}
+                                        </>
+                                    )
+                                }
+                                
+                            }
+                        </DataAppContext.Consumer>
+                    </div>
+                </div>
 
                 <div>To Do App</div>
 

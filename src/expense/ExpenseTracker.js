@@ -9,7 +9,7 @@ const ExpenseTracker = () => {
     const localAppData = useContext(DataAppContext);
     return(
         <>
-        <Row>
+        <Row className='bg-info'>
             <Col sm={6}>
                 <h2>Expense Tracker</h2>
             </Col>
@@ -18,10 +18,10 @@ const ExpenseTracker = () => {
             </Col>
         </Row>
         <Row>
-            <Col sm={6}>
+            <Col sm={6} className='px-4'>
                 <Income />
             </Col>
-            <Col sm={6}>
+            <Col sm={6} className='px-4'>
                 <Expense />
             </Col>
         </Row>
