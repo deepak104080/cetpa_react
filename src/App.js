@@ -22,6 +22,8 @@ import FormFn from './FormFn';
 import Parent from './context/Parent';
 import ExpenseTracker from './expense/ExpenseTracker';
 import DataApp, {DataAppContext} from './DataApp';
+import HOC1 from './hoc/HOC1';
+import HOC2 from './hoc/HOC2';
 
 function App() {
 
@@ -49,6 +51,8 @@ function App() {
                   <Route path='/formfn' element = {<FormFn/>}/>
                   <Route path='/context' element = {<Parent/>}/>
                   <Route path='/expensetracker' element = {<ExpenseTracker/>}/>
+                  <Route path='/hoc1' element = {<HOC1/>}/>
+                  <Route path='/hoc2' element = {<HOC2/>}/>
                   
                 </Routes>
               </div>
