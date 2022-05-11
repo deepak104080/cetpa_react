@@ -136,3 +136,9 @@ On some OS/browsers , toLocaleString may or may not show AM/PM at the end, but t
 
 Controlled Components vs Uncontrolled components
 State logics vs Ref
+
+
+
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+npx create-react-app my-app --template typescript
