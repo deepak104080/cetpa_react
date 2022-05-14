@@ -1,3 +1,9 @@
+# Repos List
+Json Server - https://github.com/deepak104080/json_server_cetpa
+JS - https://github.com/deepak104080/cetpa_js
+React - https://github.com/deepak104080/cetpa_react
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

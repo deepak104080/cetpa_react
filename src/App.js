@@ -24,6 +24,7 @@ import ExpenseTracker from './expense/ExpenseTracker';
 import DataApp, {DataAppContext} from './DataApp';
 import HOC1 from './hoc/HOC1';
 import HOC2 from './hoc/HOC2';
+import ContactApp from './ContactApp';
 
 function App() {
 
@@ -53,7 +54,7 @@ function App() {
                   <Route path='/expensetracker' element = {<ExpenseTracker/>}/>
                   <Route path='/hoc1' element = {<HOC1/>}/>
                   <Route path='/hoc2' element = {<HOC2/>}/>
-                  
+                  <Route path='/contactapp' element = {<ContactApp/>}/>
                 </Routes>
               </div>
               <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Right</div>

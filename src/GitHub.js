@@ -70,3 +70,19 @@ const GitHub = () => {
 }
 
 export default GitHub;
+
+
+
+// REST API
+// GET - READ
+// POST - CREATE
+// PUT - UPDATE
+// DELETE - DELETE
+
+// json-server
+
+// database - structured and no-structred
+// table - row column
+// non-structred - schema
+
+// Contact List - App
