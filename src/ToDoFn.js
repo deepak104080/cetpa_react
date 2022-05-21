@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import {nanoid} from 'nanoid';
+import {useParams} from 'react-router-dom';
 import { DataAppContext } from './DataApp';
 
 
@@ -7,6 +8,8 @@ const ToDoFn = () => {
     const [input_val, setInput] = useState('');
     const [toDoList, setToDoList] = useState([]); // array of objects - id, todotext, status
     const login_temp = useContext(DataAppContext);
+    const abc = useParams();
+    console.log('-----------useParams-----------------', abc.id);
 
     const handleChange = (e) => {
         setInput(e.target.value);

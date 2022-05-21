@@ -148,3 +148,21 @@ State logics vs Ref
 npm install --save typescript @types/node @types/react @types/react-dom @types/jest
 
 npx create-react-app my-app --template typescript
+
+
+React Hooks List
+
+
+useState - State 
+useEffect - Lifecycle Methods
+useContext - React Context
+
+
+useRef
+useMemo
+useCallback
+
+
+Custom Hooks - 
+useQuery
+useParams

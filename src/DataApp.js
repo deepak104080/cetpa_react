@@ -5,11 +5,20 @@ const DataAppContext = React.createContext();
 
 
 const DataApp = (props) => {
-    const initialValues = {loginstatus: false, username: 'User 1', balanceAmount: 0}
+    const initialValues = {loginstatus: false, username: 'User 1', balanceAmount: 0, bgColor: 'white'}
     const [appstate, setAppState] = useState(initialValues);
 
     const login = () => {
         setAppState({...appstate, loginstatus: !appstate.loginstatus});
+    }
+    const login_user = () => {
+        setAppState({...appstate, loginstatus: true});
+    }
+    const logout_user = () => {
+        setAppState({...appstate, loginstatus: false});
+    }
+    const updateBgColor = (color) => {
+        setAppState({...appstate, bgColor: color});
     }
     // const addBalance = (e) => {
     //     console.log('e.target.value', e.target.value, typeof(e.target.value))
@@ -29,8 +38,10 @@ const DataApp = (props) => {
     }
 
     return(
-        <DataAppContext.Provider value={{appstate, login, addBalance, subBalance}}>
-            {props.children}
+        <DataAppContext.Provider value={{appstate, login, addBalance, subBalance, login_user, logout_user, updateBgColor}}>
+            <div className='container app-wrapper' style={{'background': appstate.bgColor}}>
+                {props.children}
+            </div>
         </DataAppContext.Provider>
     )
 }

@@ -6,3 +6,35 @@ body {
     background-color: black!important;
     color: white !important;
 }
+
+.navbar-expand {
+    flex-wrap: wrap!important;
+}
+
+
+.tile-red {
+    display: inline-block;
+    padding: 50px;
+    background-color: red;
+    cursor: pointer;
+}
+.tile-blue {
+    display: inline-block;
+    padding: 50px;
+    background-color: red;
+    cursor: pointer;
+}
+.tile-green {
+    display: inline-block;
+    padding: 50px;
+    background-color: red;
+    cursor: pointer;
+}
+
+
+.tile {
+    display: inline-block;
+    padding: 50px;
+    cursor: pointer;
+    border:1px solid #777777;
+}
