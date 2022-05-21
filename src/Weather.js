@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 
 const Weather = () => {
-
+    // console.log(process.env.REACT_APP_X_RAPIDAPI_KEY);
     useEffect(() => {
         const options = {
             method: 'GET',
@@ -10,7 +10,7 @@ const Weather = () => {
             params: {lat: '35.5', lon: '-78.5'},
             headers: {
                 'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com',
-                'X-RapidAPI-Key': '0305d8ed7amsh1b557f97ebb9bbfp19c66ajsn278e9d25d062'
+                'X-RapidAPI-Key': process.env.REACT_APP_X_RAPIDAPI_KEY
             }
         }
         axios.request(options)
