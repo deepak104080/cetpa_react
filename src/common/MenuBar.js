@@ -37,6 +37,8 @@ const MenuBar = () => {
                     <Link to="/hooklayouteffect" className='btn btn-outline-success'>Hook LayoutEffect</Link>
                     <Link to="/hookmemo" className='btn btn-outline-success'>Hook Memo</Link>
                     <Link to="/colorapp" className='btn btn-outline-success'>Color App</Link>
+                    <Link to="/hookhandle" className='btn btn-outline-success'>Hook Handle</Link>
+                    <Link to="/hookcallback" className='btn btn-outline-success'>Hook Callback</Link>
                     {/* <Nav.Link><Link to="/hooklayouteffect" className='btn btn-outline-success'>Hook LayoutEffect</Link></Nav.Link> */}
 
                     {/* <NavDropdown title="Dropdown" id="nav-dropdown" className='btn btn-outline-success'>

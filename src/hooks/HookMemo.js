@@ -30,15 +30,15 @@ const HookMemo = () => {
 
     return(
         <>
-        <h2>List of cars</h2>
-        <ul>
-            {/* {displayCars(cars)} */}
-            {renderCars}
-        </ul>
-        <br></br>
-        <button onClick={subscribeFn}>Subscribe</button>
-        <br></br>
-        <button onClick={addCarFn}>Add Car</button>
+            <h2>List of cars</h2>
+            <ul>
+                {/* {displayCars(cars)} */}
+                {renderCars}
+            </ul>
+            <br></br>
+            <button onClick={subscribeFn}>Subscribe</button>
+            <br></br>
+            <button onClick={addCarFn}>Add Car</button>
         </>
     )
 }

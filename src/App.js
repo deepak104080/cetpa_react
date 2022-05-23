@@ -33,6 +33,8 @@ import Accounts from './secure/Accounts';
 import HookLayoutEffect from './hooks/HookLayoutEffect';
 import HookMemo from './hooks/HookMemo';
 import ColorApp from './ColorApp';
+import HookHandle from './hooks/HookHandle';
+import HookCallback from './hooks/HookCallBack';
 
 function App() {
   const temp = useContext(DataAppContext);
@@ -81,6 +83,9 @@ function App() {
                   <Route path='/hooklayouteffect' element = {<HookLayoutEffect/>}/>
                   <Route path='/hookmemo' element = {<HookMemo/>}/>
                   <Route path='/colorapp' element = {<ColorApp/>}/>
+                  <Route path='/hookhandle' element = {<HookHandle/>}/>
+                  <Route path='/hookcallback' element = {<HookCallback/>}/>
+                  
                   <Route path="*" element={<NotFound/>}/>
                 </Routes>
               </div>
