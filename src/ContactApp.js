@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ContactApp_Add from './ContactApp_Add';
 import ContactApp_Edit from './ContactApp_Edit';
  
@@ -7,6 +8,8 @@ const ContactApp = () => {
     const [contacts, setContacts] = useState([]);
     const [editId, setEditId] = useState('');
     const [showEditArea, setShowEditArea] = useState(false);
+    const navigate = useNavigate();
+
     useEffect(() =>{
         apiFn();
     },[])
@@ -47,6 +50,11 @@ const ContactApp = () => {
         setShowEditArea(false);
         apiFn();
     }
+
+    function redirectFn () {
+        navigate('/redirect', {state: {id: '123', name: 'tempname'}});
+    }
+
     return (
         <>
             <h2>Contact Application</h2>
@@ -65,6 +73,9 @@ const ContactApp = () => {
             <br></br>
             {showEditArea && <ContactApp_Edit data_edit = {editId} editContactDone={editContactDone}/>}
             <ContactApp_Add callApi={callApi}/>
+
+            <br></br>
+            <button onClick={redirectFn}>Redirect to </button>
         </>
     )
 }

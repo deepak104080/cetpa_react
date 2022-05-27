@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { lazy, Suspense, useContext } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import logo from './logo.svg';
 // import './App.css';
@@ -7,7 +7,8 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import './css/style.css';
 import './css/tempcss.scss';
 import Header from './common/Header';
-import Footer from './common/Footer';
+// import Footer from './common/Footer';
+
 import MenuBar  from './common/MenuBar';
 import Home  from './Home';
 import ToDo from './ToDo';
@@ -35,6 +36,9 @@ import HookMemo from './hooks/HookMemo';
 import ColorApp from './ColorApp';
 import HookHandle from './hooks/HookHandle';
 import HookCallback from './hooks/HookCallBack';
+import Redirect from './Redirect';
+
+const Footer = lazy(() => import('./common/Footer'));
 
 function App() {
   const temp = useContext(DataAppContext);
@@ -85,14 +89,16 @@ function App() {
                   <Route path='/colorapp' element = {<ColorApp/>}/>
                   <Route path='/hookhandle' element = {<HookHandle/>}/>
                   <Route path='/hookcallback' element = {<HookCallback/>}/>
+                  <Route path='/redirect' element = {<Redirect/>}/>
                   
                   <Route path="*" element={<NotFound/>}/>
                 </Routes>
               </div>
               <div className='col-sm-12 col-lg-2 bg-warning bg-opacity-50 app-sidebar'>Right</div>
           </div>
-          
-          <Footer/>
+          <Suspense fallback={<div>---Footer---</div>}>
+            <Footer/>
+          </Suspense>
         </DataApp>
     </BrowserRouter>
   );

@@ -2,6 +2,7 @@
 Json Server - https://github.com/deepak104080/json_server_cetpa
 JS - https://github.com/deepak104080/cetpa_js
 React - https://github.com/deepak104080/cetpa_react
+React Lazy - https://github.com/deepak104080/react_npm_cetpa
 
 
 # Getting Started with Create React App
