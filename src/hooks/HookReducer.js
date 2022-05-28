@@ -91,3 +91,5 @@ export default HookReducer;
 
 // delhi
 // chennai
+
+//Redux - https://thumbs.gfycat.com/SociableCraftyAlpaca-max-1mb.gif
