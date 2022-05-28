@@ -3,6 +3,7 @@ Json Server - https://github.com/deepak104080/json_server_cetpa
 JS - https://github.com/deepak104080/cetpa_js
 React - https://github.com/deepak104080/cetpa_react
 React Lazy - https://github.com/deepak104080/react_npm_cetpa
+Redux Repo - https://github.com/deepak104080/redux_app_cetpa_test
 
 
 # Getting Started with Create React App
@@ -167,3 +168,52 @@ useCallback
 Custom Hooks - 
 useQuery
 useParams
+
+
+
+
+
+
+
+
+
+
+
+
+
+redux
+react-redux
+
+
+store/state management
+single source of truth
+
+
+
+
+REDUX
+UI/JSX - user/event/triger
+
+reducer - logic to modify state
+action - dispatcher - type and payload
+store/state - object
+selector - fetch data from store
+
+
+store : {
+    about: {
+        showAddress: false,
+        address: 'string',
+        contact : number
+    },
+    products: {
+        showAddress: false,
+        address: 'string',
+        contact : number
+    },
+    services: {
+        showAddress: false,
+        address: 'string',
+        contact : number
+    }
+}

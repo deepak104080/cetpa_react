@@ -19,6 +19,7 @@ const MenuBar = () => {
                 <div className='col-12'>
                 
                 <Navbar>
+                    <Link to="/hookreducer" className='btn btn-outline-success'>Hook Reducer</Link>
                     <Link to="/contactapp" className='btn btn-outline-success'>Contact App</Link>
                     <Link to="/home" className='btn btn-outline-success'>Home</Link>
                     <Link to="/github" className='btn btn-outline-success'>Github</Link>
