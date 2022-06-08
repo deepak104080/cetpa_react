@@ -1,0 +1,31 @@
+.ballOne {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #555555;
+    background-color: violet;
+    border-radius: 25px;
+}
+
+.ballFinal {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #555555;
+    background-color: blueviolet;
+    border-radius: 25px;
+}
+
+.timer-div {
+    position: absolute;
+    top: 500px;
+    left: 0px;
+}
+
+.start-button {
+    position: absolute;
+    top: 600px;
+    left: 0px;
+}

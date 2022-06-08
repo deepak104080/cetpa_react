@@ -38,6 +38,7 @@ import HookHandle from './hooks/HookHandle';
 import HookCallback from './hooks/HookCallBack';
 import Redirect from './Redirect';
 import HookReducer from './hooks/HookReducer';
+import TimerBall from './TimerBall';
 
 const Footer = lazy(() => import('./common/Footer'));
 
@@ -92,6 +93,7 @@ function App() {
                   <Route path='/hookcallback' element = {<HookCallback/>}/>
                   <Route path='/redirect' element = {<Redirect/>}/>
                   <Route path='/hookreducer' element = {<HookReducer/>}/>
+                  <Route path='/timerball' element = {<TimerBall/>}/>
                   
                   <Route path="*" element={<NotFound/>}/>
                 </Routes>
